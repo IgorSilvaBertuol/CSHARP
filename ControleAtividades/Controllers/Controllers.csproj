@@ -47,6 +47,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Base\DAL\Contexto.cs" />
     <Compile Include="Base\IBaseController.cs" />
     <Compile Include="UsuariosController.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
