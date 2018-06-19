@@ -2,7 +2,7 @@
 
 namespace Models
 {
-    class Conta
+    public class Conta
     {
         public CadProdutos Produto { get; set; }
 

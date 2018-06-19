@@ -2,7 +2,7 @@
 
 namespace Models
 {
-    class CadCliente
+   public class CadCliente
     {
 
         [Key]
@@ -12,13 +12,11 @@ namespace Models
 
         public string CPF { get; set; }
 
-        public string RG { get; set; }
-
-        public int Idade { get; set; }
+       public int Idade { get; set; }
         
         public int Telefone { get; set; }
 
-        public int Celular { get; set; }
+ 
 
 
 

@@ -10,5 +10,14 @@ namespace Controllers.DAL
             
         }
 
+           public DbSet<CadCliente> Cliente { get; set; }
+           
+            public DbSet<CadFuncionario> Funcionario { get; set; }
+
+            public DbSet<CadProdutos> Produtos { get; set; }
+
+            public DbSet<Conta> Conta { get; set; }
+
+
     }
 }

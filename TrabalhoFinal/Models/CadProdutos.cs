@@ -3,7 +3,7 @@
 
 namespace Models
 {
-    class CadProdutos
+    public class CadProdutos
     {
             [Key]
             public int ProdID { get; set; }
