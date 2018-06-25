@@ -7,42 +7,48 @@ using Models;
 
 namespace Controllers.Base
 {
-    public  class ContaController
+    public class ContaController
     {
 
-       private Contexto contexto = new Contexto();
+        private Contexto contexto = new Contexto();
 
-        public CadCliente BuscarCPF (string cpf)
+        public CadCliente BuscarCPF(string cpf)
         {
-            return contexto.Cliente.Find(cpf);   
+            return contexto.Cliente.Find(cpf);
 
         }
 
-        public CadProdutos BuscaProduto (int cod)
+        public CadProdutos BuscaProduto(int cod)
         {
 
 
             return contexto.Produtos.Find(cod);
         }
 
-        public void _Conta (string cpf, int cod)
+        public void _Conta(string cpf, int cod)
         {
             float total = 0;
             CadCliente cont = BuscarCPF(cpf);
             CadProdutos prod = BuscaProduto(cod);
 
-           
-            if (cont != null && prod != null) 
-            {
-                total = cont._Conta.total + prod.ProdPreço;
-                cont._Conta.total = total;
 
-                contexto.SaveChanges();
+            if (cont != null && prod != null)
+            {
+                do
+                {
+                    total = cont._Conta.total + prod.ProdPreço;
+                    cont._Conta.total = total;
+
+                    contexto.SaveChanges();
+
+
+                } while (cont.Ativo == false);
             }
 
         }
 
-   
-        
+
+
+
     }
 }

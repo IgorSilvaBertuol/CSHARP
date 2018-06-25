@@ -14,7 +14,7 @@ namespace Controllers
         {
             contexto.Cliente.Add(entity);
             contexto.SaveChanges();
-           
+
         }
 
         public CadCliente BuscarPorID(int id)
@@ -32,7 +32,7 @@ namespace Controllers
         {
             CadCliente cli = BuscarPorID(id);
 
-            if(cli != null)
+            if (cli != null)
             {
                 contexto.Cliente.Remove(cli);
                 contexto.SaveChanges();

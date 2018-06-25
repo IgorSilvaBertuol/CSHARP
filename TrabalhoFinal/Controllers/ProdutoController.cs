@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace Controllers
 {
-   public class ProdutoController : IBaseController <CadProdutos>
+    public class ProdutoController : IBaseController<CadProdutos>
     {
 
         Contexto contexto = new Contexto();
@@ -42,7 +42,7 @@ namespace Controllers
             CadProdutos prod = BuscarPorCod(cod);
             if (prod != null)
             {
-            contexto.Produtos.Remove(prod);
+                contexto.Produtos.Remove(prod);
                 contexto.SaveChanges();
 
             }
@@ -50,7 +50,7 @@ namespace Controllers
 
         public IList<CadProdutos> ListarPorNome(string nome)
         {
-            return contexto.Produtos.Where(prod => prod.ProdNome == nome).ToList(); 
+            return contexto.Produtos.Where(prod => prod.ProdNome == nome).ToList();
         }
 
         public IList<CadProdutos> ListarTodos()

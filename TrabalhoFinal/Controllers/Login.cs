@@ -12,11 +12,11 @@ namespace Controllers
     {
         private Contexto context = new Contexto();
 
-        private CadFuncionario BuscaFunc (CadFuncionario entity)
+        private CadFuncionario BuscaFunc(CadFuncionario entity)
         {
             return context.Funcionario.Find(entity);
         }
 
-        
+
     }
 }
