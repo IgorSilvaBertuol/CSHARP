@@ -17,21 +17,6 @@ namespace Controllers
             return context.Funcionario.Find(entity);
         }
 
-        private void Entrar(CadFuncionario entity)
-        {
-
-            CadFuncionario Acesso = BuscaFunc(entity);
-
-            if (Acesso != null)
-            {
-                if (Acesso.Funcao == "Caixa")
-                {
-                   
-                }
-
-            }
-
-        }
-
+        
     }
 }
