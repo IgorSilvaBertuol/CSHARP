@@ -16,6 +16,8 @@ namespace Models
         
         public int Telefone { get; set; }
 
+        public Conta _Conta { get; set; }
+
  
 
 

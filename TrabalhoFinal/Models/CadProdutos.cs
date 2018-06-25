@@ -14,5 +14,7 @@ namespace Models
 
             public float ProdPreço { get; set; }
 
+            public int Qtnd { get; set; }
+
     }
 }

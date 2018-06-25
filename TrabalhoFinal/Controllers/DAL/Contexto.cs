@@ -1,4 +1,5 @@
 ﻿using Models;
+using System;
 using System.Data.Entity;
 
 namespace Controllers.DAL
@@ -18,6 +19,6 @@ namespace Controllers.DAL
 
             public DbSet<Conta> Conta { get; set; }
 
-
+      
     }
 }
